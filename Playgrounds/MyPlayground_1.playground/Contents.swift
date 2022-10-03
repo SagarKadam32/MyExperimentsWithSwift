@@ -54,3 +54,19 @@ let arr12 = [1,2,3,4,5,6,7,8,9,10]
 let result = arr12.contains(5)
 result
 
+
+class LocationManager {
+    static let shared = LocationManager()
+    
+    var locationGranted: Bool?
+    
+    private init() {}
+    
+    func requestionLocation() {
+        locationGranted = true
+        print("Location Granted")
+    }
+}
+
+LocationManager.shared.requestionLocation()
+
